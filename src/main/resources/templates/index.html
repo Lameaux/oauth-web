@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/default}">
+
+<head>
+    <title>Welcome</title>
+    <link th:href="@{/css/index.css}" rel="stylesheet" media="screen"/>
+</head>
+
+<body>
+
+<main role="main" layout:fragment="content">
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Welcome</h1>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+                <h2>New user?</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+                <form class="form-signup">
+                    <a href="/register" class="btn btn-lg btn-primary btn-block">Register</a>
+                </form>
+            </div>
+
+
+            <div class="col-md-4">
+                <form class="form-signin">
+                    <h3 class="h3 mb-3 font-weight-normal">Login</h3>
+                    <label for="inputEmail" class="sr-only">Email address</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <div class="mb-3">
+                        <a href="/password/restore">Forgot password?</a>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</main>
+<th:block layout:fragment="script">
+    <script th:href="@{/js/index.js}"></script>
+</th:block>
+</body>
+</html>
